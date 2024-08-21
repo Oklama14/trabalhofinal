@@ -1,5 +1,7 @@
 <div class="geral">
   <div class="formulario">
+    <h2><strong>Cadastro de Usuário</strong></h2>
+    <p> Insira seus dados para criar a sua conta!</p>
     <form [formGroup]="form">
       <app-input
         label="Nome"
@@ -18,11 +20,10 @@
         [control]="form.controls['senha']"
       />
       <app-input
-        label="Conf. Senha"
+        label="Confirmar Senha"
         type="password"
         [control]="form.controls['confSenha']"
       />
-
       <app-button
         expanded="false"
         [loading]="login.loading"
@@ -33,7 +34,7 @@
     </form>
     <div class="bottom">
       <a href="/login" mat-button>
-        <mat-icon>arrow_left</mat-icon>
+        <mat-icon>arrow_back</mat-icon>
         voltar
       </a>
     </div>

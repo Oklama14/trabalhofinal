@@ -1,0 +1,110 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(224, 197, 250, 0.527);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 30px;
+}
+p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+h2 {
+  color: #663399;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+app-input {
+  display: block;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff66cc;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #663399;
+  font-weight: 500;
+}
+
+app-button {
+  display: block;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff66cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff33bb;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}

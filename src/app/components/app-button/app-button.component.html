@@ -5,11 +5,11 @@
   [disabled]="loading"
   (click)="do_action()"
 >
-  @if (loading) {
-  <mat-icon><mat-spinner diameter="19"> </mat-spinner></mat-icon>
-  } @if (!loading) {
-  {{ label }}
-  } @if (!loading) {
-  <mat-icon>{{ icon }}</mat-icon>
-  }
+  <ng-container *ngIf="loading">
+    <mat-icon><mat-spinner diameter="19"></mat-spinner></mat-icon>
+  </ng-container>
+  <ng-container *ngIf="!loading">
+    {{ label }}
+    <mat-icon>{{ icon }}</mat-icon>
+  </ng-container>
 </button>

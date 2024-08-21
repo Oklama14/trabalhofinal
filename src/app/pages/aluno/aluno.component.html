@@ -1,6 +1,13 @@
-<form [formGroup]="form">
-  <app-input label="nome" [control]="form.controls['nome']" />
-  <app-input label="Sobrenome" [control]="form.controls['sobreNome']" />
-  <app-input label="idade" [control]="form.controls['idade']" />
-  <app-button [loading]="alunoService.loading" label="gravar" (click)="salvar()" />
-</form>
+<div class="wrapper">
+  <div class="container">
+    <h2><strong> Cadastro de Aluno </strong></h2>
+    <p> Insira os dados para realizar o cadastro</p>
+    <form [formGroup]="form">
+      <app-input label="Nome" [control]="form.controls['nome']"></app-input>
+      <app-input label="Sobrenome" [control]="form.controls['sobrenome']"></app-input>
+      <app-input type="number" label="Idade" [control]="form.controls['idade']"></app-input>
+      <app-button [loading]="alunoService.loading" label="Cadastrar" icon="save" (click)="salvar()"></app-button>
+      <app-button label="Início" icon="home" (click)="voltarParaHome()"></app-button>
+    </form>
+  </div>
+</div>

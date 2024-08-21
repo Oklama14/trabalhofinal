@@ -1,14 +1,30 @@
-<ol>
-  <li *ngFor="let aluno of alunos | async">
-    {{ aluno.nome }} {{ aluno.sobrenome }} - {{ aluno.idade }}
-    
-    <button mat-button (click)="atualizarAluno(aluno.IDaluno)">
-      <mat-icon>edit</mat-icon>
-    </button>
-    
-    <button mat-button (click)="apagarAluno(aluno.IDaluno)">Excluir</button>
-    
-  </li>
-</ol>
+<div class="container">
 
-<a href="/aluno" mat-button> Novo</a>
+  <h3 *ngIf="hora">Horario em São Borja/RS: {{hora.utc_datetime | date: 'HH:mm'}} </h3>
+  
+  <h2><strong>Gerenciamento de Sala de Aula</strong></h2>
+
+    <ol>
+    <li *ngFor="let aluno of alunos | async">
+      Nome: {{ aluno.nome | toTitleCase }}<br>
+      Sobrenome: {{ aluno.sobrenome | toTitleCase }}<br>
+      Idade: {{ aluno.idade }}<br>
+      Grupo Etário: {{ aluno.idade | ageGroup | toTitleCase}}<br>
+      
+      <div>
+        <button mat-button (click)="atualizarAluno(aluno.chave)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-button (click)="apagarAluno(aluno.chave)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </li>
+  </ol>
+  
+  <a href="/aluno" mat-button>Novo</a>
+
+  <h4 *ngIf="advise">Advice: {{advise}}</h4>
+  <h4 *ngIf="advise">Conselho: {{advise | translateAdvice}}</h4>
+
+</div>

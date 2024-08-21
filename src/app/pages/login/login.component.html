@@ -1,12 +1,14 @@
 <div class="geral">
   <div class="formulario">
+    <h2><strong>Login</strong></h2>
+    <p>Insira suas credenciais para acessar a aplicação meu patrão.</p>
     <form [formGroup]="form">
-      <app-input label="E-mail" [control]="form.controls['email']" />
+      <app-input label="E-mail" [control]="form.controls['email']"></app-input>
       <app-input
         label="Senha"
         type="password"
         [control]="form.controls['senha']"
-      />
+      ></app-input>
 
       <app-button
         label="Entrar"
@@ -16,10 +18,14 @@
       ></app-button>
     </form>
     <div class="bottom">
-      <a href="/novaconta" mat-button>
-        <mat-icon>add</mat-icon>
-        Nova conta</a
-      >
+      <a href="/" class="button-animado voltar-button">
+        <mat-icon>home</mat-icon>
+        <strong>Home</strong>
+      </a>
+      <a href="/novaconta" class="button-animado nova-conta-button">
+        <mat-icon>add_circle</mat-icon>
+        <strong>Nova conta</strong>
+      </a>
     </div>
   </div>
 </div>

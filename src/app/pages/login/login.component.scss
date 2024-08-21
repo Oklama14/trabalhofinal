@@ -4,21 +4,76 @@
   align-items: center;
   justify-content: center;
   height: calc(100% - 80px);
+  background-color: #f5f5f5;
 }
+
 .formulario {
-  background-color: #eee;
+  background-color: #ffffff;
   width: 50%;
-  padding: 1.5em;
-  border-radius: 10px;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  
+  h2 {
+    color: #663399;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+
+  p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
   form {
     display: flex;
     flex-direction: column;
   }
+
   @media (max-width: 600px) {
     width: 90%;
   }
 }
+
 .bottom {
-  padding: 1em;
-  text-align: right;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.button-animado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #663399;
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.875rem; /* Tamanho ajustado */
+}
+
+a.button-animado mat-icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+a.button-animado:hover {
+  background-color: #4b028bc0;
+  transform: translateY(-2px);
+}
+
+a.button-animado strong {
+  display: inline-block;
+  vertical-align: middle;
 }

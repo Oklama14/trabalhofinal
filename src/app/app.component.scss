@@ -1,0 +1,24 @@
+mat-toolbar {
+    background: linear-gradient(
+      90deg, 
+      #ff66cc 0%, 
+      #663399 30%, 
+      #663399 70%, 
+      #ff66cc 100%
+    );
+    color: white;
+    font-family: 'Gupter', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    
+    span {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-family: 'Gupter', sans-serif;
+    }
+  }
+  

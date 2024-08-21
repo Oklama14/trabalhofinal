@@ -1,5 +1,5 @@
 export interface Aluno {
     nome: string;
-    idade:number;
-    sobrenome:string;
+    idade: number;
+    sobrenome: string;
 }
